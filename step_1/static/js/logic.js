@@ -69,7 +69,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
 
     legend.onAdd = function(){
         let container = L.DomUtil.create("div", "info legend");
-        let grades = ["(-10) - 10", "10 - 30", "30 - 50", "50 - 70", "70 - 90", "90+"];
+        let grades = ["(-10+) - 10", "(10+) - 30", "(30+) - 50", "(50+) - 70", "(70+) - 90", "90+"];
         let colors = ['#98ee00', '#d4ee00', '#eecc00', '#ee9c00', '#ea822c', '#ea2c2c'];
         for(let index = 0; index < grades.length; index++) {
             container.innerHTML += `<i style="background: ${colors[index]}"></i> ${grades[index]} <br>`
